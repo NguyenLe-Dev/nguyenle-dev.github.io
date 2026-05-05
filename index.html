@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Le | Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, #1e293b, #0f172a);
+            padding: 20px;
+        }
+
+        .hero-name { font-size: 3.5rem; margin: 0; color: var(--accent); }
+        .hero-tagline { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        .section-title {
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+            border: 1px solid #334155;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .tag {
+            background: #0ea5e920;
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .skill-item {
+            background: #334155;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer { text-align: center; padding: 40px; color: var(--text-dim); }
+        
+        a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="hero-name">Nguyen Le</h1>
+    <p class="hero-tagline">Computer Engineering Student specializing in low-level systems, hardware design, and computer vision.</p>
+    <div style="margin-top: 20px;">
+        <a href="#"><i class="fab fa-github fa-2x"></i></a> &nbsp;
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-list">
+        <div class="skill-item">C / C++</div>
+        <div class="skill-item">Verilog (FPGA)</div>
+        <div class="skill-item">Python (OpenCV)</div>
+        <div class="skill-item">KiCad (PCB Design)</div>
+        <div class="skill-item">Linux Kernel / Pintos</div>
+        <div class="skill-item">ESP32 & Embedded Systems</div>
+    </div>
+
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="grid">
+        <!-- Systems Project -->
+        <div class="card">
+            <h3>Pintos Operating System</h3>
+            <p>Developed kernel-level features including virtual memory management, priority scheduling, and system call interfaces.</p>
+            <span class="tag">C</span> <span class="tag">x86 Assembly</span> <span class="tag">Operating Systems</span>
+        </div>
+
+        <!-- Hardware Project -->
+        <div class="card">
+            <h3>Custom ESP32 Controller</h3>
+            <p>Designed a custom PCB in KiCad featuring Hall Effect joysticks and ESP32-S3 integration for low-latency wireless input.</p>
+            <span class="tag">KiCad</span> <span class="tag">ESP32-S3</span> <span class="tag">Hardware</span>
+        </div>
+
+        <!-- Computer Vision Project -->
+        <div class="card">
+            <h3>Feature-Based Image Stitching</h3>
+            <p>Implemented SIFT keypoint detection and RANSAC algorithms to create seamless panoramas via homography transforms.</p>
+            <span class="tag">Python</span> <span class="tag">OpenCV</span> <span class="tag">Mathematics</span>
+        </div>
+
+        <!-- Digital Logic Project -->
+        <div class="card">
+            <h3>RISC-V Datapath Design</h3>
+            <p>Modeled a functional RISC-V processor datapath including ALU, control unit, and instruction fetching logic.</p>
+            <span class="tag">Verilog</span> <span class="tag">Computer Architecture</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Nguyen Le | Built with precision and a few cups of coffee.</p>
+</footer>
+
+</body>
+</html>
